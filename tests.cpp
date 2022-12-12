@@ -24,3 +24,12 @@ TEST_CASE("is Alphaumeric"){
     CHECK(isAlphanumeric("Abcd1234xyz") == true);
     CHECK(isAlphanumeric("KLMN 8-7-6") == false);
 }
+TEST_CASE("Nested Parentheses"){
+    CHECK(nestedParens("((()))") == true);
+    CHECK(nestedParens("") == true);
+    CHECK(nestedParens("(()") == false);
+}
+// TEST_CASE("Divisible"){
+//     int prices[] = {10, 15, 12, 18, 19, 17, 13, 35, 33};
+//     CHECK(divisible(&prices[0], 9) == true);
+// }

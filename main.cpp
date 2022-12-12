@@ -27,7 +27,11 @@ int main()
     arr[8] = 13;
     arr[9] = -21;
 
-    std::cout<< "The sum of values in the array is "<< sumArray(arr, size)<< "\n";
+    std::cout<< "The sum of values in the array\n";
+    for(int i = 0; i<10; i++) {
+        std::cout<< arr[i]<<" ";
+    }
+    std::cout<< "is "<< sumArray(arr, size)<< "\n";
     delete[] arr;
 
     std::cout<<"\n-----------------------------------------\n";
@@ -40,5 +44,15 @@ int main()
 
     std::cout<<"\n-----------------------------------------\n";
 
+    std::string paren1 = "()";
+    std::string paren2 = "a(b)c";
+
+    std::cout<< "Is "<< paren1<< " nested parentheses: "<< nestedParens(paren1)<< "\n";
+    std::cout<< "Is "<< paren2<< " nested parentheses: "<< nestedParens(paren2)<< "\n";
+
+    std::cout<<"\n-----------------------------------------\n";
+
+    // int prices[] = {10, 15, 12, 18, 19, 17, 13, 35, 33};
+    // std::cout<< divisible(&prices[0], 9);
     return 0;
 }
