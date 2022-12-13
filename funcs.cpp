@@ -44,31 +44,31 @@ bool nestedParens(std::string s) {
     return false;
 }
 
-// bool divisible(int *prices, int size) {
-//     if(!(sumArray(prices,size) %2) ) {
-//         return false;
-//     }
+bool divisible(int *prices, int size) {
+    if((sumArray(prices,size) %2) != 0) {
+        return false;
+    }
 
-//     return divides(prices, size, (sumArray(prices,size)/2), 0, 0);
+    return divides(prices, size, (sumArray(prices,size)/2), 0, 0);
     
 
-// }
+}
 
-// bool divides(int *prices, int size, int half_price, int p1, int p2) {
-//     if(size == 0){
-//         if(p1 == half_price && p2 == half_price) {
-//             return true;
-//         }
-//         else {
-//             return false;
-//         }
-//     }
+bool divides(int *prices, int size, int half_price, int p1, int p2) {
+    if(size == 0){
+        if(p1 == half_price && p2 == half_price) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
-//     if(((p1+ *prices) <= half_price) && divides(prices+1, size-1, half_price, p1+*prices,p2)) {
-//         return true;
-//     }
-//     else if((p2+ *prices) <= half_price && divides(prices+1, size-1, half_price, p1, p2+*prices)) {
-//         return true;
-//     }
-//     return false;
-// }
+    if(((p1+ *prices) <= half_price) && divides(prices+1, size-1, half_price, p1+*prices,p2)) {
+        return true;
+    }
+    else if((p2+ *prices) <= half_price && divides(prices+1, size-1, half_price, p1, p2+*prices)) {
+        return true;
+    }
+    return false;
+}

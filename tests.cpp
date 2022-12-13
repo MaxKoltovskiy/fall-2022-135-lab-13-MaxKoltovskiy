@@ -29,7 +29,14 @@ TEST_CASE("Nested Parentheses"){
     CHECK(nestedParens("") == true);
     CHECK(nestedParens("(()") == false);
 }
-// TEST_CASE("Divisible"){
-//     int prices[] = {10, 15, 12, 18, 19, 17, 13, 35, 33};
-//     CHECK(divisible(&prices[0], 9) == true);
-// }
+TEST_CASE("Divisible"){
+    int array[] = {10,20,40,30};
+    CHECK(divisible(&array[0],4) == true);
+
+    int array1[] = {20, 20, 40, 34};
+    CHECK(divisible(&array1[0],4) == false);
+
+    int array2[] = {50, 24, 11, 38};
+    CHECK(divisible(&array2[0],4) == false);
+
+}

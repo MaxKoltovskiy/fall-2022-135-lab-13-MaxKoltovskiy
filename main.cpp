@@ -50,9 +50,14 @@ int main()
     std::cout<< "Is "<< paren1<< " nested parentheses: "<< nestedParens(paren1)<< "\n";
     std::cout<< "Is "<< paren2<< " nested parentheses: "<< nestedParens(paren2)<< "\n";
 
-    std::cout<<"\n-----------------------------------------\n";
+    std::cout<<"\n--------------------------------------------------\n";
 
-    // int prices[] = {10, 15, 12, 18, 19, 17, 13, 35, 33};
-    // std::cout<< divisible(&prices[0], 9);
+    int prices[] = {10, 15, 12, 18, 19, 17, 13, 35, 33};
+    std::cout<< "Is array ";
+    for(int i=0; i< 9;i++) {
+        std::cout<< prices[i]<< " ";
+    }
+    std::cout<< "divisible: "<< divisible(&prices[0], 9)<< "\n\n";
+
     return 0;
 }
